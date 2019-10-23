@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ClickActAchieve</string>
+    <string name="book_now">Book Now</string>
+    <string name="my_bookings">My bookings</string>
 </resources>

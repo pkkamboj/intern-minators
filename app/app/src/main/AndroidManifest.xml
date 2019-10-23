@@ -16,8 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserLandingActivity"
-            android:parentActivityName=".LoginActivity">
+        <activity android:name=".UserLandingActivity">
+
+        </activity>
+        <activity android:name=".BookNowDashBoardActivity"
+            android:parentActivityName=".UserLandingActivity">
+
+        </activity>
+        <activity android:name=".MyBookingsActivity"
+            android:parentActivityName=".UserLandingActivity">
 
         </activity>
     </application>
