@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp"
-                android:text="@string/see_all_activities"
+                android:text="@string/physical_activities"
                 android:textSize="64sp"
                 android:textStyle="bold" />
 
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp"
-                android:text="@string/see_all_activities"
+                android:text="@string/arts_crafts_activities"
                 android:textSize="64sp"
                 android:textStyle="bold" />
 
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp"
-                android:text="@string/see_all_activities"
+                android:text="@string/rec_activities"
                 android:textSize="64sp"
                 android:textStyle="bold" />
         </LinearLayout>
