@@ -7,8 +7,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    final Button BUTTON_LOGIN = findViewById(R.id.);
-    final Button BUTTON_CREATE_ACCOUNT = findViewById(R.id.);
+    Button BUTTON_LOGIN = (Button) findViewById(R.id.);
+    Button BUTTON_CREATE_ACCOUNT = (Button) findViewById(R.id.);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
