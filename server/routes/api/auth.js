@@ -3,26 +3,14 @@ const bcrypt = require("bcryptjs");
 const router = express.Router();
 const config = require("config");
 const jwt = require("jsonwebtoken");
+
+const users = require("../../users");
 // const auth = require("../../middleware/auth");
 
-const tempUser = {
-  id: "123",
-  username: "temp123",
-  password: ""
-};
-
-// Create salt & hash
-bcrypt.genSalt(10, (err, salt) => {
-  bcrypt.hash("password", salt, (err, hash) => {
-    if (err) throw err;
-    tempUser.password = hash;
-  });
-});
-
-// @route POST api/auth
-// @desc Auth user
+// @route POST api/auth/login
+// @desc Login user
 // @access Public
-router.post("/", (req, res) => {
+router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   // Simple validation
@@ -30,25 +18,69 @@ router.post("/", (req, res) => {
     return res.status(400).json({ msg: "Please enter all fields" });
   }
 
-  bcrypt.compare(password, tempUser.password).then(isMatch => {
+  var user = users.find(user => user.username === username);
+
+  bcrypt.compare(password, user.password).then(isMatch => {
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials" });
 
-    jwt.sign(
-      { id: tempUser.id },
-      config.get("jwtSecret"),
-      { expiresIn: 3600 },
-      (err, token) => {
+    jwt.sign({ id: user.id }, config.get("jwtSecret"), (err, token) => {
+      if (err) throw err;
+
+      res.json({
+        token,
+        user: {
+          id: user.id,
+          username: user.user
+        }
+      });
+    });
+  });
+});
+
+// @route POST api/auth/signup
+// @desc Register new user
+// @access Public
+router.post("/signup", (req, res) => {
+  const { username, password } = req.body;
+
+  // Simple validation
+  if (!username || !password) {
+    return res.status(400).json({ msg: "Please enter all fields" });
+  }
+
+  // Chec for an existing user
+  var user = users.find(user => user.username === username);
+
+  if (user) return res.status(400).json({ msg: "User already exists" });
+
+  var newUser = {
+    id: Math.floor(Math.random() * 1000),
+    username,
+    password
+  };
+
+  bcrypt.genSalt(10, (err, salt) => {
+    if (err) console.log(err);
+
+    bcrypt.hash(newUser.password, salt, (err, hash) => {
+      if (err) console.log(err);
+
+      newUser.password = hash;
+      users.push(newUser);
+
+      jwt.sign({ id: newUser.id }, config.get("jwtSecret"), (err, token) => {
         if (err) throw err;
 
         res.json({
           token,
           user: {
-            id: tempUser.id,
-            username: tempUser.user
+            id: newUser.id,
+            name: newUser.name,
+            email: newUser.email
           }
         });
-      }
-    );
+      });
+    });
   });
 });
 
