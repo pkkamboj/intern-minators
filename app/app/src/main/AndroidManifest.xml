@@ -19,6 +19,9 @@
         <activity android:name=".UserLandingActivity">
 
         </activity>
+        <activity android:name=".LoginActivity">
+
+        </activity>
         <activity android:name=".BookNowDashBoardActivity"
             android:parentActivityName=".UserLandingActivity">
 
