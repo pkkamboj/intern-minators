@@ -9,40 +9,50 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+
+import okhttp3.FormBody;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+
 
 public class LoginActivity extends AppCompatActivity {
-    EditText usernameText = findViewById(R.id.edit_username);
-    EditText passwordText = findViewById(R.id.edit_password);
-    Button loginButton = findViewById(R.id.button_login);
-    TextView responseText = findViewById(R.id.text_error);
-    RequestQueue queue = Volley.newRequestQueue(this);
-    Intent userLandingIntent = new Intent(this, UserLandingActivity.class);
+    EditText usernameText;
+    EditText passwordText;
+    Button loginButton;
+    TextView responseText;
 
     private void login(){
-        String url = "localhost:3000/api/auth";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                responseText.setText(response);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                responseText.setText(error.getMessage());
-            }
-        });
+        String apiUrl = "localhost:3000/api/auth";
+        try{
+            RequestBody body = new FormBody.Builder()
+                    .add("usename",usernameText.getText().toString())
+                    .add("password",passwordText.getText().toString())
+                    .build();
+
+            Request loginRequest = new Request.Builder()
+                    .url(apiUrl)
+                    .header("Content-Type","application/json")
+                    .method("POST", body)
+                    .build();
+        }
+        catch(Exception e){
+            
+        }
+    }
+
+    private void openUserLanding(){
+        Intent intent = new Intent(this, UserLandingActivity.class);
+        startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        usernameText = findViewById(R.id.edit_username);
+        passwordText = findViewById(R.id.edit_password);
+        responseText = findViewById(R.id.text_error);
+        loginButton = findViewById(R.id.button_login);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 //Make API call to localhost:3000/api/auth/
                 //login();
                 loginButton.setEnabled(true);
-                startActivity(userLandingIntent);
+                openUserLanding();
             }
         });
     }
