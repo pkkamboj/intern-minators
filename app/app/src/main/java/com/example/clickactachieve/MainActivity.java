@@ -42,5 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openNewAccountPage() {
+        Intent intent = new Intent(this, UserTypeActivity.class);
+        startActivity(intent);
     }
 }
