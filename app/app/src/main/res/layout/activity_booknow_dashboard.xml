@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/sideNav"
         android:layout_width="64dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <ImageButton
             android:layout_width="match_parent"
@@ -13,6 +16,33 @@
             android:src="@drawable/nav_button">
 
         </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashBoard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/sideNav">
+
+        <LinearLayout
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingRight="30sp"
+                android:text="@string/dashboard"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
