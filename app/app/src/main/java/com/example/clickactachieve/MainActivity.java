@@ -9,13 +9,16 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    final Button BUTTON_LOGIN = findViewById(R.id.loginButton);
-    final Button BUTTON_CREATE_ACCOUNT = findViewById(R.id.newAccountButton);
+    Button BUTTON_LOGIN;
+    Button BUTTON_CREATE_ACCOUNT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        BUTTON_LOGIN = findViewById(R.id.loginButton);
+        BUTTON_CREATE_ACCOUNT = findViewById(R.id.newAccountButton);
 
 
         BUTTON_LOGIN.setOnClickListener(new View.OnClickListener() {
