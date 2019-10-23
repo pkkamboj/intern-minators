@@ -8,6 +8,7 @@
         android:id="@+id/sideNav"
         android:layout_width="64dp"
         android:layout_height="match_parent"
+        android:paddingRight="10dp"
         >
 
         <ImageButton
@@ -24,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_toRightOf="@+id/sideNav">
+        android:layout_toRightOf="@+id/sideNav"
+        android:layout_toEndOf="@+id/sideNav">
 
         <LinearLayout
             android:id="@+id/headerBar"
@@ -36,11 +38,55 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:paddingRight="30sp"
                 android:text="@string/dashboard"
-                android:textSize="20dp"
+                android:textSize="64sp"
                 android:textStyle="bold" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterBtnGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="@string/see_all_activities"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="@string/see_all_activities"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="@string/see_all_activities"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="@string/see_all_activities"
+                android:textSize="64sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
 
