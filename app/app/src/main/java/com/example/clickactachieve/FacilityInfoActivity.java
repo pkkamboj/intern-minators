@@ -10,7 +10,7 @@ public class FacilityInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_type);
+        setContentView(R.layout.activity_facility_info);
 
         /*public void onFacilityTypeClicked(View v) {
             Intent intent = new Intent(this, FacilityInfoActivity.class);

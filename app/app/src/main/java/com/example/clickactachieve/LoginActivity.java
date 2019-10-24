@@ -12,24 +12,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-
-import okhttp3.FormBody;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import okio.BufferedSink;
-
-
 public class LoginActivity extends AppCompatActivity {
     EditText usernameText;
     EditText passwordText;

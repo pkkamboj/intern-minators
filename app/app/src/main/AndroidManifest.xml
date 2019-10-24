@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".UserTypeActivity"
             android:parentActivityName=".MainActivity">
+        </activity>
       
         <activity android:name=".CreateEventActivity">
 
@@ -33,9 +34,6 @@
 
         </activity>
         <activity android:name=".EventListActivity">
-
-        </activity>
-        <activity android:name=".UserTypeActivity">
 
         </activity>
         <activity android:name=".BookNowDashBoardActivity"
@@ -54,6 +52,19 @@
             android:parentActivityName=".UserTypeActivity">
 
         </activity>
+        <activity android:name=".UserAddressActivity"
+            android:parentActivityName=".UserInfoActivity">
+
+        </activity>
+        <activity android:name=".UserDriverActivity"
+            android:parentActivityName=".UserAddressActivity">
+
+        </activity>
+        <activity android:name=".UserVehicleActivity"
+            android:parentActivityName=".UserDriverActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
