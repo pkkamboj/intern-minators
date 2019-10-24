@@ -23,7 +23,8 @@
         <activity android:name=".LoginActivity">
 
         </activity>
-        <activity android:name=".UserTypeActivity">
+        <activity android:name=".UserTypeActivity"
+            android:parentActivityName=".MainActivity">
 
         </activity>
         <activity android:name=".BookNowDashBoardActivity"
@@ -32,6 +33,14 @@
         </activity>
         <activity android:name=".MyBookingsActivity"
             android:parentActivityName=".UserLandingActivity">
+
+        </activity>
+        <activity android:name=".UserInfoActivity"
+            android:parentActivityName=".UserTypeActivity">
+
+        </activity>
+        <activity android:name=".FacilityInfoActivity"
+            android:parentActivityName=".UserTypeActivity">
 
         </activity>
     </application>

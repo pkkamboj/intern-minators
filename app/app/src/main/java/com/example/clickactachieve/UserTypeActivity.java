@@ -3,6 +3,7 @@ package com.example.clickactachieve;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,8 +14,8 @@ public class UserTypeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_type);
 
-        facilityType = findViewById(R.id.facTypeButton);
-        userType = findViewById(R.id.userTypeButton);
+        Button facilityType = findViewById(R.id.facTypeButton);
+        Button userType = findViewById(R.id.userTypeButton);
 
         facilityType.setOnClickListener(new View.OnClickListener() {
             @Override
