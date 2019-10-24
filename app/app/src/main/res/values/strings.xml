@@ -15,4 +15,8 @@
     <string name="welcome">Welcome!</string>
     <string name="login">Login</string>
     <string name="newUser">New User</string>
+    <string name="goBack"><![CDATA[< Back]]></string>
+    <string name="enter_your_info">Enter your information</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forget_password"><u>Forgot Password?</u></string>
 </resources>

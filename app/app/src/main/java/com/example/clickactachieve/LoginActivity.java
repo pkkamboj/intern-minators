@@ -121,8 +121,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         usernameText = findViewById(R.id.edit_username);
         passwordText = findViewById(R.id.edit_password);
-        responseText = findViewById(R.id.text_error);
-        loginButton = findViewById(R.id.button_login);
+        loginButton = findViewById(R.id.sign_in);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
