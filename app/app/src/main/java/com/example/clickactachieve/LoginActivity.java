@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login() {
         if(usernameText.getText().toString().equals("username") && passwordText.getText().toString().equals("password")){
+            System.out.println("hi");
             openUserLanding();
         }
 

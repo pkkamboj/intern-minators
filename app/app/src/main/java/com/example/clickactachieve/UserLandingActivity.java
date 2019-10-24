@@ -10,38 +10,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class UserLandingActivity extends AppCompatActivity {
 
-    Button bookActivity;
-    Button existingBookings;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_bookings);
-
-        bookActivity = findViewById(R.id.bookActivityButton);
-        existingBookings = findViewById(R.id.viewBookingsButton);
-
-        bookActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clickBookActivity();
-            }
-        });
-
-        existingBookings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clickMyBookings();
-            }
-        });
+        setContentView(R.layout.activity_user_landing);
     }
 
-    public void clickBookActivity() {
+    public void clickBookActivity(View v) {
         Intent intent = new Intent(this, BookNowDashBoardActivity.class);
         startActivity(intent);
     }
 
-    public void clickMyBookings() {
+    public void clickMyBookings(View v) {
         Intent intent = new Intent(this, MyBookingsActivity.class);
         startActivity(intent);
     }

@@ -27,13 +27,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
-        android:text="Book Activity" />
+        android:text="Book Activity"
+        android:onClick="clickBookActivity"/>
 
     <Button
         android:id="@+id/viewBookingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Bookings" />
+        android:text="View Bookings"
+        android:onClick="clickMyBookings"/>
 
 
 </LinearLayout>
