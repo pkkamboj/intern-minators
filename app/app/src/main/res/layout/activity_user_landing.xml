@@ -1,41 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!-- User Landing -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_landin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    app:fontFamily="@font/roboto">
+
+    <!-- Hello, Username! -->
+
+    <!-- What would you like to do? -->
 
     <TextView
-        android:id="@+id/addressUser"
-        android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="0dp"
-        android:gravity="center"
-        android:text="Hello, Username!" />
+        android:id="@+id/hello_usern"
+        android:layout_width="1600dp"
+        android:layout_height="407dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/hello_usern"
+        android:textAppearance="@style/hello_usern"
+        tools:layout_editor_absoluteX="-453dp"
+        tools:layout_editor_absoluteY="36dp" />
 
     <TextView
-        android:id="@+id/Question"
-        android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="0dp"
-        android:gravity="center"
-        android:text="What would you like to do?" />
+        android:id="@+id/what_would_"
+        android:layout_width="1600dp"
+        android:layout_height="192dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/what_would_"
+        android:textAppearance="@style/what_would_"
+        tools:layout_editor_absoluteX="-278dp"
+        tools:layout_editor_absoluteY="533dp" />
 
-    <Button
-        android:id="@+id/bookActivityButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        android:text="Book Activity"
-        android:onClick="clickBookActivity"/>
-
-    <Button
-        android:id="@+id/viewBookingsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Bookings"
-        android:onClick="clickMyBookings"/>
+    <!--    &lt;!&ndash; Rectangle 13 &ndash;&gt;-->
+    <!--    <View-->
+    <!--        android:id="@+id/rectangle_13"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@drawable/rectangle_1"-->
+    <!--        >-->
+    <!--    </View>-->
 
 
-</LinearLayout>
+    <!--    &lt;!&ndash; Book Activity &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/book_activi"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:text="@string/book_activi"-->
+    <!--        android:textAppearance="@style/book_activi"-->
+    <!--        android:gravity="center_horizontal|top"-->
+    <!--        />-->
+
+
+    <!--    &lt;!&ndash; Rectangle 14 &ndash;&gt;-->
+    <!--    <View-->
+    <!--        android:id="@+id/rectangle_14"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@drawable/rectangle_1"-->
+    <!--        >-->
+    <!--    </View>-->
+
+    <!-- My Activities -->
+    <!--    <TextView-->
+    <!--        android:id="@+id/my_activiti"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginTop="1dp"-->
+    <!--        android:layout_marginRight="-10dp"-->
+    <!--        android:layout_marginBottom="-1dp"-->
+    <!--        android:gravity="center_horizontal|top"-->
+    <!--        android:text="@string/my_activiti"-->
+    <!--        android:textAppearance="@style/my_activiti" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

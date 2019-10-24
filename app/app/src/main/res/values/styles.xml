@@ -8,4 +8,52 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="book_activi">
+
+        <item name="android:textSize">
+            100sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="hello_usern">
+
+        <item name="android:textSize">
+            185sp
+        </item>
+
+        <item name="android:textColor">
+            #AB47BC
+        </item>
+
+    </style>
+
+    <style name="what_would_">
+
+        <item name="android:textSize">
+            96sp
+        </item>
+
+        <item name="android:textColor">
+            #7A3286
+        </item>
+
+    </style>
+
+
+    <style name="my_activiti">
+
+        <item name="android:textSize">
+            100sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
 </resources>
