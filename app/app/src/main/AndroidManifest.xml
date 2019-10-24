@@ -25,6 +25,17 @@
         </activity>
         <activity android:name=".UserTypeActivity"
             android:parentActivityName=".MainActivity">
+      
+        <activity android:name=".CreateEventActivity">
+
+        </activity>
+        <activity android:name=".FacilityLandingActivity">
+
+        </activity>
+        <activity android:name=".EventListActivity">
+
+        </activity>
+        <activity android:name=".UserTypeActivity">
 
         </activity>
         <activity android:name=".BookNowDashBoardActivity"
