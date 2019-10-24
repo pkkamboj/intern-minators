@@ -22,7 +22,7 @@ public class UserLandingActivity extends AppCompatActivity {
     }
 
     public void clickMyBookings(View v) {
-        Intent intent = new Intent(this, MyBookingsActivity.class);
+        Intent intent = new Intent(this, EventListActivity.class);
         startActivity(intent);
     }
 }
