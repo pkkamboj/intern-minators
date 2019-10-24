@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MyBookingsActivity extends AppCompatActivity {
+public class UserLandingActivity extends AppCompatActivity {
 
     Button bookActivity;
     Button existingBookings;
