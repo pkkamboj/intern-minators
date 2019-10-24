@@ -9,7 +9,7 @@
     <string name="rec_activities">Rec Activities</string>
     <string name="book_activi">Book Activity</string>
     <string name="my_activi">My Activities</string>
-    <string name="hello_usern">Hello,\nUsername!</string>
+    <string name="hello_usern">Hello,</string>
     <string name="what_would_">What would you like to do?</string>
     <string name="my_activiti">My Activities</string>
 </resources>
