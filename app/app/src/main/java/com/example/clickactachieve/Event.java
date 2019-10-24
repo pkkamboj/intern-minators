@@ -10,7 +10,7 @@ public class Event {
     private int minute;
     private boolean morning;
     private String location;
-    private int eventType;//0-physical, 1-arts, 2-recreation
+    private int eventType; //0-physical, 1-arts, 2-recreation
 
     public String getName() {
         return name;

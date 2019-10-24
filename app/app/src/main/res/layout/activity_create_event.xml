@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <TextView
+    android:id="@+id/labelFirstName"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="75dp"
+    android:text="First Name"
+    android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/labelFirstName"
+        android:hint="First Name"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/labelLastName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="75dp"
+        android:text="Last Name"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/labelLastName"
+        android:hint="Last Name"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/labelDateOfBirth"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="75dp"
+        android:text="Date of Birth"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editDateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/labelDateOfBirth"
+        android:hint="mm/dd/yyyy"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/labelTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:layout_marginLeft="75dp"
+        android:text="Time"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/labelTime"
+        android:hint="Time"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/labelLocation"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="75dp"
+        android:text="Location"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/labelLocation"
+        android:hint="Location"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/labelEventType"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        android:layout_marginLeft="75dp"
+        android:text="Event Type"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editEventType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/labelEventType"
+        android:hint="Event Type"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editEventType"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="150dp"
+        android:textSize="20dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editEventType"
+        android:layout_toRightOf="@+id/buttonSubmit"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="200dp"
+        android:textSize="20dp"
+        android:text="Cancel" />
+
+</RelativeLayout>

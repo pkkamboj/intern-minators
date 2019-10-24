@@ -26,7 +26,7 @@
         <activity android:name=".UserTypeActivity"
             android:parentActivityName=".MainActivity">
         </activity>
-      
+
         <activity android:name=".CreateEventActivity">
 
         </activity>
