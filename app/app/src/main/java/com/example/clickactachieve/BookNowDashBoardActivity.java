@@ -14,7 +14,7 @@ public class BookNowDashBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_booknow_dashboard);
     }
 
-    public void onPhyscialBtnClicked(View v) {
+    public void onPhysicalBtnClicked(View v) {
         Intent intent = new Intent(this, PickTimeActivity.class);
         startActivity(intent);
     }
