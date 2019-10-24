@@ -23,6 +23,10 @@
         <activity android:name=".LoginActivity">
 
         </activity>
+        <activity android:name=".UserTypeActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+      
         <activity android:name=".CreateEventActivity">
 
         </activity>
@@ -32,9 +36,7 @@
         <activity android:name=".EventListActivity">
 
         </activity>
-        <activity android:name=".UserTypeActivity">
 
-        </activity>
         <activity android:name=".BookNowDashBoardActivity"
             android:parentActivityName=".UserLandingActivity">
 
@@ -43,15 +45,14 @@
             android:parentActivityName=".UserLandingActivity">
 
         </activity>
-
-        <activity android:name=".PickDateActivity"
-            android:parentActivityName=".BookNowDashBoardActivity">
+        <activity android:name=".UserInfoActivity"
+            android:parentActivityName=".UserTypeActivity">
 
         </activity>
+        <activity android:name=".FacilityInfoActivity"
+            android:parentActivityName=".UserTypeActivity">
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        </activity>
     </application>
 
 </manifest>
