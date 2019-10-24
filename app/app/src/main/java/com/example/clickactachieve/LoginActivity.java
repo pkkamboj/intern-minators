@@ -38,9 +38,12 @@ public class LoginActivity extends AppCompatActivity {
     final String TAG = "LoginActivity123";
 
     private void login() {
-        if(usernameText.getText().toString().equals("username") && passwordText.getText().toString().equals("password")){
+        if (usernameText.getText().toString().equals("username") && passwordText.getText().toString().equals("password")){
             System.out.println("hi");
             openUserLanding();
+        } else if (usernameText.getText().toString().equals("facility") && passwordText.getText().toString().equals("password")) {
+            Log.d(TAG, "login: test");
+            openFacilityLanding();
         }
 
         /*URL apiUrl = new URL("http://10.0.2.2:3000/api/auth/login") ;
@@ -104,6 +107,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void openUserLanding(){
         Intent intent = new Intent(this, UserLandingActivity.class);
+        startActivity(intent);
+    }
+
+    private void openFacilityLanding() {
+        Intent intent = new Intent(this, FacilityLandingActivity.class);
         startActivity(intent);
     }
 

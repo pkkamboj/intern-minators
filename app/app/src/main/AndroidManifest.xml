@@ -23,6 +23,15 @@
         <activity android:name=".LoginActivity">
 
         </activity>
+        <activity android:name=".CreateEventActivity">
+
+        </activity>
+        <activity android:name=".FacilityLandingActivity">
+
+        </activity>
+        <activity android:name=".EventListActivity">
+
+        </activity>
         <activity android:name=".UserTypeActivity">
 
         </activity>
