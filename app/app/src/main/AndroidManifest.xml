@@ -23,6 +23,9 @@
         <activity android:name=".LoginActivity">
 
         </activity>
+        <activity android:name=".UserTypeActivity"
+            android:parentActivityName=".MainActivity">
+      
         <activity android:name=".CreateEventActivity">
 
         </activity>
@@ -41,6 +44,14 @@
         </activity>
         <activity android:name=".MyBookingsActivity"
             android:parentActivityName=".UserLandingActivity">
+
+        </activity>
+        <activity android:name=".UserInfoActivity"
+            android:parentActivityName=".UserTypeActivity">
+
+        </activity>
+        <activity android:name=".FacilityInfoActivity"
+            android:parentActivityName=".UserTypeActivity">
 
         </activity>
     </application>
