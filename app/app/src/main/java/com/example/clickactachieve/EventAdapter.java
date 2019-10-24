@@ -1,6 +1,5 @@
 package com.example.clickactachieve;
 
-import android.service.autofill.Dataset;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,21 +8,27 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
     private ArrayList<Event> dataset;
+
+    public EventAdapter(ArrayList<Event> list){
+        dataset = list;
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView textViewName;
-        public ViewHolder(TextView tvN) {
-            super(tvN);
-            textViewName = tvN;
+        public View view;
+        public ViewHolder(View view) {
+            super(view);
+            this.view = view;
         }
     }
 
     @Override
     public EventAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int ViewType){
-        TextView textView = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.event_adapter,parent,false);
-        ViewHolder vh = new ViewHolder(textView);
+        View view =  LayoutInflater.from(parent.getContext()).inflate(R.layout.item_event,parent,false);
+        ViewHolder vh = new ViewHolder(view);
         return vh;
     }
 
@@ -31,8 +36,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.textViewName.setText(dataset.get(position).getName());
-
+        ((TextView) holder.view.findViewById(R.id.text_event_location)).setText(dataset.get(position).getLocation());
+        ((TextView) holder.view.findViewById(R.id.text_event_name)).setText(dataset.get(position).getName());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
