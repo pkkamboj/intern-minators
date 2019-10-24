@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         BUTTON_LOGIN = findViewById(R.id.loginButton);
-        BUTTON_CREATE_ACCOUNT = findViewById(R.id.newAccountButton);
+        BUTTON_CREATE_ACCOUNT = findViewById(R.id.newUserButton);
 
 
         BUTTON_LOGIN.setOnClickListener(new View.OnClickListener() {
