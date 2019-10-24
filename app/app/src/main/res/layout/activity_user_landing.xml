@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:layout_centerInParent="true"
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button_book_now"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onBookNowClicked"
         android:text="@string/book_now" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_my_bookings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onMyBookingsClicked"
-        android:text="@string/my_bookings" />
+        android:text="@string/my_bookings"
+        android:layout_below="@+id/button_book_now"
+        />
 
-</LinearLayout>
+</RelativeLayout>
 
