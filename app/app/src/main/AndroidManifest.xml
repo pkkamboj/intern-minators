@@ -53,6 +53,10 @@
             android:parentActivityName=".UserTypeActivity">
 
         </activity>
+        <activity android:name=".PickTimeActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

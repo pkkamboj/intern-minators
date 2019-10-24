@@ -67,6 +67,7 @@
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp"
                 android:text="@string/physical_activities"
+                android:onClick="onPhysicalBtnClicked"
                 android:textSize="64sp"
                 android:textStyle="bold" />
 

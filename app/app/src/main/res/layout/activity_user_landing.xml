@@ -44,6 +44,7 @@
         android:background="@drawable/purple_rectangle"
         android:text="@string/book_activi"
         android:textAppearance="@style/book_activi"
+        android:onClick="clickBookActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,6 +57,7 @@
         android:background="@drawable/purple_rectangle"
         android:text="@string/my_activi"
         android:textAppearance="@style/book_activi"
+        android:onClick="clickMyBookings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

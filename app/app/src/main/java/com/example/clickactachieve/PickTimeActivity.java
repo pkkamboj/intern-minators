@@ -9,7 +9,7 @@ import android.widget.TimePicker;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class BookTimeOfActivity extends AppCompatActivity {
+public class PickTimeActivity extends AppCompatActivity {
     Button pickTime;
     TimePickerDialog timePickerDialog;
 
@@ -23,7 +23,7 @@ public class BookTimeOfActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)  {
 
-                timePickerDialog = new TimePickerDialog(BookTimeOfActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                timePickerDialog = new TimePickerDialog(PickTimeActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
                         pickTime.setText(hourOfDay + ":" + minute);
