@@ -6,22 +6,23 @@
     <TextView
         android:id="@+id/timeTitle"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="155dp"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="0dp"
         android:gravity="center"
         android:text="TIME?"
-        android:textSize="50sp" />
+        android:textSize="100sp" />
 
     <Button
         android:id="@+id/pickTimeButton"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
+        android:layout_width="292dp"
+        android:layout_height="152dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="227dp"
-        android:layout_marginLeft="140dp"
         android:gravity="center"
         android:onClick="timePicked"
-        android:text="select time"/>
+        android:text="select time"
+        android:textSize="50sp" />
 
 </LinearLayout>

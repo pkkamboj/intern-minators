@@ -48,7 +48,7 @@ public class PickDateActivity extends AppCompatActivity {
 
                 dpd.show();
 
-                datePicked();
+                //datePicked();
             }
         });
 

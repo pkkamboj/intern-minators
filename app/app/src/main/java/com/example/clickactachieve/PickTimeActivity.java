@@ -32,16 +32,16 @@ public class PickTimeActivity extends AppCompatActivity {
                 }, 0, 0, false);
 
                 timePickerDialog.show();
+                //timePicked();
 
             }
-
 
         });
 
 
     }
 
-    public void timePicked(View v) {
+    public void timePicked() {
         Intent intent = new Intent(this, EventListActivity.class);
         startActivity(intent);
     }
