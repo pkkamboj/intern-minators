@@ -22,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/click"
         android:layout_width="1168px"
         android:layout_height="wrap_content"
         android:layout_marginStart="216px"
@@ -32,7 +33,8 @@
         android:textColor="#1976D2"
         android:textSize="96px"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"/>
 
 
     <androidx.recyclerview.widget.RecyclerView

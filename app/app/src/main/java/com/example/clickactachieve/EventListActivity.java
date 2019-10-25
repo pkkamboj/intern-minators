@@ -85,9 +85,11 @@ public class EventListActivity extends AppCompatActivity {
         RecyclerView rvEvents = findViewById(R.id.recycler_event_list);
         if(getIntent().getExtras() != null){
             adapter = new EventAdapter(booked);
+            findViewById(R.id.click).setVisibility(View.GONE);
         }
         else{
             adapter = new EventAdapter(events);
+            findViewById(R.id.click).setVisibility(View.VISIBLE);
         }
         rvEvents.setAdapter(adapter);
 
