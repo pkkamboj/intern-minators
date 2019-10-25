@@ -1,16 +1,24 @@
 package com.example.clickactachieve;
 
+import java.sql.Time;
+import java.util.Date;
+
 public class Event {
     private String name;
     private String description;
-    private int year;
-    private int month;
-    private int day;
-    private int hour;
-    private int minute;
-    private boolean morning;
     private String location;
-    private int eventType;//0-physical, 1-arts, 2-recreation
+    private int eventType; //0-physical, 1-arts, 2-recreation
+
+    public static int PHYSICAL = 0;
+    public static int ARTS = 1;
+    public static int RECREATION = 2;
+
+    public Event(String name, String description, String location, int eventType) {
+        this.name = name;
+        this.description = description;
+        this.location = location;
+        this.eventType = eventType;
+    }
 
     public String getName() {
         return name;
@@ -28,35 +36,19 @@ public class Event {
         this.description = description;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
     public String getLocation() {
         return location;
     }
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getEventType() {
+        return eventType;
+    }
+
+    public void setEventType(int eventType) {
+        this.eventType = eventType;
     }
 }

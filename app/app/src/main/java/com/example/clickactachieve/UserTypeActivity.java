@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,8 +15,8 @@ public class UserTypeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_type);
 
-        Button facilityType = findViewById(R.id.facTypeButton);
-        Button userType = findViewById(R.id.userTypeButton);
+        ImageButton facilityType = findViewById(R.id.facTypeButton);
+        ImageButton userType = findViewById(R.id.userTypeButton);
 
         facilityType.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,5 +43,9 @@ public class UserTypeActivity extends AppCompatActivity {
     public void clickUserType() {
         Intent intent = new Intent(this, UserInfoActivity.class);
         startActivity(intent);
+    }
+
+    public void onBackBtnClicked(View v) {
+        finish();
     }
 }

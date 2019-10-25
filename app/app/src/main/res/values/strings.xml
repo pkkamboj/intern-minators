@@ -4,8 +4,21 @@
     <string name="my_bookings">My bookings</string>
     <string name="dashboard">DashBoard</string>
     <string name="see_all_activities">See All Activities</string>
-    <string name="physical_activities">Physical Activities</string>
-    <string name="arts_crafts_activities">Arts and Crafts Activities</string>
-    <string name="rec_activities">Rec Activities</string>
-
+    <string name="physical_activities">PHYSICAL</string>
+    <string name="arts_crafts_activities">ARTS &amp; \nCRAFTS</string>
+    <string name="learn_activities">LEARN</string>
+    <string name="volunteer_activities">VOLUNTEER</string>
+    <string name="book_activi">Book Activity</string>
+    <string name="my_activi">My Activities</string>
+    <string name="hello_usern">Hello,</string>
+    <string name="what_would_">What would you like to do?</string>
+    <string name="my_activiti">My Activities</string>
+    <string name="welcome">Welcome!</string>
+    <string name="login">Login</string>
+    <string name="newUser">New User</string>
+    <string name="goBack"><![CDATA[< Back]]></string>
+    <string name="enter_your_info">Enter your information</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forget_password"><u>Forgot Password?</u></string>
+    <string name="select_act_type">Select Activity Type</string>
 </resources>

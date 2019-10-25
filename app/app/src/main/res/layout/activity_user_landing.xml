@@ -1,41 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!-- User Landing -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_landin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    app:fontFamily="@font/roboto">
+
+    <!-- Hello, Username! -->
+
+    <!-- What would you like to do? -->
 
     <TextView
-        android:id="@+id/addressUser"
-        android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="0dp"
-        android:gravity="center"
-        android:text="Hello, Username!" />
+        android:id="@+id/hello_usern"
+        android:layout_width="1600px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="487px"
+        android:gravity="center_horizontal|top"
+        android:text="@string/hello_usern"
+        android:textAppearance="@style/hello_usern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Question"
-        android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="0dp"
-        android:gravity="center"
-        android:text="What would you like to do?" />
+        android:id="@+id/what_would_"
+        android:layout_width="1600px"
+        android:layout_height="192px"
+        android:layout_marginTop="1008px"
+        android:gravity="center_horizontal|top"
+        android:text="@string/what_would_"
+        android:textAppearance="@style/what_would_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/facCreateActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        android:text="Book Activity"
-        android:onClick="clickBookActivity"/>
+        android:layout_width="1225px"
+        android:layout_height="325px"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="656dp"
+        android:background="@drawable/purple_rectangle"
+        android:text="@string/book_activi"
+        android:textAppearance="@style/book_activi"
+        android:onClick="clickBookActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/facMyEvents"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Bookings"
-        android:onClick="clickMyBookings"/>
+        android:layout_width="1225px"
+        android:layout_height="325px"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="880dp"
+        android:background="@drawable/purple_rectangle"
+        android:text="@string/my_activi"
+        android:textAppearance="@style/book_activi"
+        android:onClick="clickMyBookings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

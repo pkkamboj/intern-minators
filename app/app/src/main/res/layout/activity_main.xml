@@ -4,29 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1976D2"
+    app:fontFamily="@font/roboto"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="363dp"
-        android:layout_marginBottom="41dp"
-        android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/newAccountButton"
-        app:layout_constraintEnd_toEndOf="@+id/newAccountButton"
-        app:layout_constraintStart_toStartOf="@+id/newAccountButton"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="831px"
+        android:layout_height="90px"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="1216px"
+        android:layout_height="368px"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="260dp"
+        android:text="@string/welcome"
+        android:textColor="#FFFFFF"
+        android:textSize="250px"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/newAccountButton"
-        android:layout_width="130dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="227dp"
-        android:text="New Account"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/loginButton"
+        android:layout_width="1193px"
+        android:layout_height="282px"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="648dp"
+        android:background="@drawable/white_rectangle"
+        android:text="@string/login"
+        android:textColor="#1976D2"
+        android:textSize="130px"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/newUserButton"
+        android:layout_width="1193px"
+        android:layout_height="282px"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="848dp"
+        android:background="@drawable/white_rectangle"
+        android:text="@string/newUser"
+        android:textColor="#1976D2"
+        android:textSize="130px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

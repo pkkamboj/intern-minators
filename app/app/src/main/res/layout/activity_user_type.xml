@@ -1,35 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:fontFamily="@font/roboto"
+    android:background="#97CC04">
 
-    <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
+    <Button
+        android:id="@+id/loginBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:text="@string/goBack"
+        android:textColor="#FFFFFF"
+        android:textSize="110px"
+        android:onClick="onBackBtnClicked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/userTypeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="I am a..."
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="#110202" />
+    <TextView
+        android:id="@+id/userTypeText"
+        android:layout_width="1216px"
+        android:layout_height="368px"
+        android:layout_marginStart="192px"
+        android:layout_marginLeft="192px"
+        android:layout_marginTop="686px"
+        android:text="I am a..."
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="250px"
+        app:fontFamily="@font/roboto_thin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/facTypeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Facility"
-            android:textSize="36sp" />
+    <ImageButton
+        android:id="@+id/userTypeButton"
+        android:layout_width="1193px"
+        android:layout_height="282px"
+        android:scaleType="centerInside"
 
-        <Button
-            android:id="@+id/userTypeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User"
-            android:textSize="36sp" />
+        android:background="@android:color/transparent"
+        android:layout_marginStart="203px"
+        android:layout_marginLeft="203px"
+        android:layout_marginTop="1191px"
+        android:src="@drawable/user_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    </LinearLayout>
-</RelativeLayout>
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/facTypeButton"
+        android:layout_width="1193px"
+        android:layout_height="282px"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="203px"
+        android:layout_marginLeft="203px"
+        android:layout_marginTop="1593px"
+        android:src="@drawable/facility_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
