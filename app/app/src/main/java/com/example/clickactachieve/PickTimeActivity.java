@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class PickTimeActivity extends AppCompatActivity {
+    Button done;
     Button pickTime;
     TimePickerDialog timePickerDialog;
 
@@ -20,6 +21,7 @@ public class PickTimeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_time);
 
         pickTime = findViewById(R.id.pickTimeButton);
+        done = findViewById(R.id.doneButton);
         pickTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)  {
@@ -32,13 +34,17 @@ public class PickTimeActivity extends AppCompatActivity {
                 }, 0, 0, false);
 
                 timePickerDialog.show();
-                //timePicked();
 
             }
 
         });
 
-
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timePicked();
+            }
+        });
     }
 
     public void timePicked() {

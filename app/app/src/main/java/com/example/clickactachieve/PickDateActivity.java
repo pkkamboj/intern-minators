@@ -17,6 +17,7 @@ public class PickDateActivity extends AppCompatActivity {
 
     //TextView title;
     Button pickDate;
+    Button done;
     Calendar calendar;
     DatePickerDialog dpd;
 
@@ -27,6 +28,7 @@ public class PickDateActivity extends AppCompatActivity {
 
         //title = findViewById(R.id.dateTitle);
         pickDate = findViewById(R.id.pickDateButton);
+        done = findViewById(R.id.doneButton);
 
         pickDate.setOnClickListener(new View.OnClickListener() {
 
@@ -47,8 +49,13 @@ public class PickDateActivity extends AppCompatActivity {
                 }, day, month, year);
 
                 dpd.show();
+            }
+        });
 
-                //datePicked();
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicked();
             }
         });
 
