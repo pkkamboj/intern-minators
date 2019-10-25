@@ -15,7 +15,7 @@ public class BookNowDashBoardActivity extends AppCompatActivity {
     }
 
     public void onPhysicalBtnClicked(View v) {
-        Intent intent = new Intent(this, PickTimeActivity.class);
+        Intent intent = new Intent(this, PickDateActivity.class);
         startActivity(intent);
     }
 }
