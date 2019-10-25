@@ -117,6 +117,7 @@
         android:layout_marginTop="2201px"
         android:background="@drawable/hollow_blue_rectangle"
         android:text="@string/see_all_activities"
+        android:onClick="allActivitiesBtnClicked"
         android:textColor="#1976D2"
         android:textSize="80px"
         app:layout_constraintStart_toStartOf="parent"

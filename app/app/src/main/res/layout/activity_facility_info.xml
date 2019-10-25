@@ -22,8 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:inputType="textEmailAddress"
             android:text="Email"
-            android:inputType="textEmailAddress" />
+            android:textSize="36sp" />
 
         <EditText
             android:id="@+id/editTextUserPhone"
@@ -39,15 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:inputType="textPostalAddress"
             android:text="Address"
-            android:inputType="textPostalAddress" />
-
-        <TextView
-            android:id="@+id/textUserPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password:"
-            android:textColor="#030000"
             android:textSize="36sp" />
 
         <EditText
@@ -55,13 +49,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textColor="#130101"
+            android:textSize="36sp" />
 
         <Button
             android:id="@+id/facInfoButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="Done"
             android:textSize="36sp" />
 
     </LinearLayout>
