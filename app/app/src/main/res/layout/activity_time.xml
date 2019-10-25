@@ -21,6 +21,7 @@
         android:layout_marginBottom="227dp"
         android:layout_marginLeft="140dp"
         android:gravity="center"
-        android:text="open time picker"/>
+        android:onClick="timePicked"
+        android:text="select time"/>
 
 </LinearLayout>

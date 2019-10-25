@@ -66,6 +66,9 @@
         <activity android:name=".PickTimeActivity">
 
         </activity>
+        <activity android:name=".PickDateActivity">
+
+        </activity>
 
     </application>
 
