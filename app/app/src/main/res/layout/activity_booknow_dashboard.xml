@@ -135,7 +135,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="#1976D2"
         android:elevation="10dp"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <TextView
             android:layout_width="576px"
