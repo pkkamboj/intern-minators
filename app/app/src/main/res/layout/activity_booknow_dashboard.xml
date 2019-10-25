@@ -78,7 +78,6 @@
         android:textColor="#FFFFFF"
         android:onClick="artsAndCraftBtnClicked"
         android:textSize="80px"
-        android:onClick="onACBtnClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,7 +93,6 @@
         android:textColor="#FFFFFF"
         android:onClick="learnBtnClicked"
         android:textSize="80px"
-        android:onClick="onLearnBtnClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,7 +107,6 @@
         android:text="@string/volunteer_activities"
         android:onClick="volunteerBtnClicked"
         android:textColor="#FFFFFF"
-        android:onClick="onVolunteerBtnClicked"
         android:textSize="80px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
