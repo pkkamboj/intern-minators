@@ -47,12 +47,14 @@ public class PickDateActivity extends AppCompatActivity {
                 }, day, month, year);
 
                 dpd.show();
+
+                datePicked();
             }
         });
 
     }
 
-    public void datePicked(View v) {
+    public void datePicked() {
         Intent intent = new Intent(this, PickTimeActivity.class);
         startActivity(intent);
     }
