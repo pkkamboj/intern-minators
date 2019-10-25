@@ -132,7 +132,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="#1976D2"
         android:elevation="10dp"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <TextView
             android:layout_width="576px"
@@ -178,6 +178,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="189px"
             android:layout_marginLeft="189px"
+            android:layout_marginTop="848px"
+            android:text="UberCare"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
             android:layout_marginTop="645px"
             android:text="@string/my_bookings"
             android:textColor="#FFFFFF"
@@ -191,8 +204,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="189px"
             android:layout_marginLeft="189px"
-            android:layout_marginTop="1863px"
+            android:layout_marginTop="1660px"
             android:text="@string/help"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="1863px"
+            android:text="Contact Us"
             android:textColor="#FFFFFF"
             android:textSize="100px"
             android:gravity="top"

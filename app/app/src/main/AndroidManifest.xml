@@ -66,8 +66,13 @@
 
         </activity>
         <activity android:name=".UserRegCompleteActivity">
+
         </activity>
         <activity android:name=".PickDateActivity">
+
+        </activity>
+        <activity android:name=".FacRegCompleteActivity">
+
         </activity>
 
     </application>
