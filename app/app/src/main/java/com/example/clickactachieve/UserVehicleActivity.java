@@ -15,7 +15,7 @@ public class UserVehicleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_vehicle);
 
         Button yes = findViewById(R.id.userVehicleYes);
-        Button no = findViewById(R.id.userVehicleNo)
+        Button no = findViewById(R.id.userVehicleNo);
 
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,12 +36,12 @@ public class UserVehicleActivity extends AppCompatActivity {
     }
 
     public void clickYes() {
-        Intent intent = new Intent(this, UserRegComplete.class);
+        Intent intent = new Intent(this, UserRegCompleteActivity.class);
         startActivity(intent);
     }
 
     public void clickNo() {
-        Intent intent = new Intent(this, UserRegComplete.class);
+        Intent intent = new Intent(this, UserRegCompleteActivity.class);
         startActivity(intent);
     }
 }

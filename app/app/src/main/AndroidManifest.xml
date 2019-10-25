@@ -63,11 +63,13 @@
         </activity>
         <activity android:name=".UserVehicleActivity"
             android:parentActivityName=".UserDriverActivity">
+        </activity>
         <activity android:name=".PickTimeActivity">
 
         </activity>
+        <activity android:name=".UserRegCompleteActivity">
+        </activity>
         <activity android:name=".PickDateActivity">
-
         </activity>
 
     </application>
