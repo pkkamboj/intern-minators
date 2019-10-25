@@ -135,13 +135,13 @@ public class EventListActivity extends AppCompatActivity {
             holder.view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    /*Intent intent = new Intent(EventListActivity.this, EventDetailsActivity.class);
+                    Intent intent = new Intent(EventListActivity.this, EventDetailsActivity.class);
                     intent.putExtra("Name",event.getName());
                     intent.putExtra("Description",event.getDescription());
                     intent.putExtra("Location",event.getLocation());
                     intent.putExtra("EventType",event.getEventType());
 
-                     */
+                    startActivity(intent);
                 }
             });
         }
