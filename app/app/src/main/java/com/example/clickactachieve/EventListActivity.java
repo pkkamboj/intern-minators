@@ -25,23 +25,31 @@ public class EventListActivity extends AppCompatActivity {
 
     private static final String TAG = "EventListActivity";
     public static ArrayList<Event> events = new ArrayList<Event>();
+    public static ArrayList<Event> booked = new ArrayList<Event>();
+    public static boolean init = false;
+
+    public void initArray(){
+        if(!init){
+            events.add(new Event("Cook the Pasta","have a passion for cooking or eating? come join us at kitchenly to make some delicious pasta! Ingredients will be provided. See you there on December 10, 2019 from 9PM -12 PM!", "Mississauga", 1));
+            events.add(new Event("Stir Up the Soup","have a passion for cooking or eating? come join us at cookza on November 14, 2019 10pm-12pm to learn how to make some soup", "Toronto", 1));
+            events.add(new Event("Bake the Cake", "have a passion for baking? our instructor will walk you through step by step the process of baking a beautiful delicious cake. it'll be on December 3, 2019 from 1PM - 3PM. See you there!", "Etobicoke", 1));
+            events.add(new Event("Knit a Scarf","join us at knitability on December 19, 2019 from 3PM-5PM to learn how to knit a scarf! All levels of experience is welcome! Coffee, tea, and water will be provided.", "Oshawa", 2));
+            events.add(new Event("Knit a Hat","winter is coming which means YOU should keep yourself or your loved ones warm with a self-knitted hat! Come out and join us at Knittingbox on November 10, 2019 from 2PM-5PM","Punjab", 2));
+            events.add(new Event("Show off some Art","Do you have a passion for art? Well, come out on November 5, 2019 form 3pm-6pm and show off your art skills!","Cali", 2));
+            events.add(new Event("Do a Painting", "Did you ever feel like an artist? Wait no more, come out and make yourself a painting on November 3, 2019 from 1pm-3pm", "Lahore", 2));
+            events.add(new Event("Chat and Chill", "Do you want to meet and mingle with other seniors in your community? Come out for a nice chat and chill on October 31, 2019","Pind", 2));
+            events.add(new Event("Meditate and Relax", "Meditate with others around you!connecting your own mind can benefit you physically and mentally. Come join us on October 28, 2019 at Meditate and Relax from 8AM - 10AM1! See you there!", "Mississauga", 0));
+            events.add(new Event("Play some Golf", "Want to have a relaxing day on a picturesque city run course? If you answered \"yes\", come out and join us at Golftown on October 26, 2019 from 10AM - 2PM!", "Zimbabwe",0));
+            events.add(new Event("Stretch it out", "Here at StretchIt, we believe that stretching plays a huge role in increasing flexibility and helping the prevention of muscle soreness. Feel free to come by and learn proper stretching techniques! Save the date: November 19, 2019 from 11AM-12PM!", "Toronto", 0));
+            init = true;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
-
-        events.add(new Event("Cook the Pasta","have a passion for cooking or eating? come join us at kitchenly to make some delicious pasta! Ingredients will be provided. See you there on December 10, 2019 from 9PM -12 PM!", "Mississauga", 1));
-        events.add(new Event("Stir Up the Soup","have a passion for cooking or eating? come join us at cookza on November 14, 2019 10pm-12pm to learn how to make some soup", "Toronto", 1));
-        events.add(new Event("Bake the Cake", "have a passion for baking? our instructor will walk you through step by step the process of baking a beautiful delicious cake. it'll be on December 3, 2019 from 1PM - 3PM. See you there!", "Etobicoke", 1));
-        events.add(new Event("Knit a Scarf","join us at knitability on December 19, 2019 from 3PM-5PM to learn how to knit a scarf! All levels of experience is welcome! Coffee, tea, and water will be provided.", "Oshawa", 2));
-        events.add(new Event("Knit a Hat","winter is coming which means YOU should keep yourself or your loved ones warm with a self-knitted hat! Come out and join us at Knittingbox on November 10, 2019 from 2PM-5PM","Punjab", 2));
-        events.add(new Event("Show off some Art","Do you have a passion for art? Well, come out on November 5, 2019 form 3pm-6pm and show off your art skills!","Cali", 2));
-        events.add(new Event("Do a Painting", "Did you ever feel like an artist? Wait no more, come out and make yourself a painting on November 3, 2019 from 1pm-3pm", "Lahore", 2));
-        events.add(new Event("Chat and Chill", "Do you want to meet and mingle with other seniors in your community? Come out for a nice chat and chill on October 31, 2019","Pind", 2));
-        events.add(new Event("Meditate and Relax", "Meditate with others around you!connecting your own mind can benefit you physically and mentally. Come join us on October 28, 2019 at Meditate and Relax from 8AM - 10AM1! See you there!", "Mississauga", 0));
-        events.add(new Event("Play some Golf", "Want to have a relaxing day on a picturesque city run course? If you answered \"yes\", come out and join us at Golftown on October 26, 2019 from 10AM - 2PM!", "Zimbabwe",0));
-        events.add(new Event("Stretch it out", "Here at StretchIt, we believe that stretching plays a huge role in increasing flexibility and helping the prevention of muscle soreness. Feel free to come by and learn proper stretching techniques! Save the date: November 19, 2019 from 11AM-12PM!", "Toronto", 0));
+        initArray();
 
 
 
@@ -71,9 +79,14 @@ public class EventListActivity extends AppCompatActivity {
             Log.e(TAG, e.toString() + (new File(".").getAbsolutePath()));
         }*/
 
-
+        EventAdapter adapter = null;
         RecyclerView rvEvents = findViewById(R.id.recycler_event_list);
-        EventAdapter adapter = new EventAdapter(events);
+        if(getIntent().getExtras() != null){
+            adapter = new EventAdapter(booked);
+        }
+        else{
+            adapter = new EventAdapter(events);
+        }
         rvEvents.setAdapter(adapter);
 
         rvEvents.setLayoutManager(new LinearLayoutManager(this));
@@ -118,17 +131,17 @@ public class EventListActivity extends AppCompatActivity {
             ((TextView) holder.view.findViewById(R.id.text_event_name)).setText(dataset.get(position).getName());
             ((TextView) holder.view.findViewById(R.id.text_event_description)).setText(dataset.get(position).getDescription());
             //set the fields in holder
-
+            final Event event = dataset.get(position);
             holder.view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        /*
-                        Intent intent = new Intent(EventListActivity.this, LoginActivity.class);
-                        //add extra to bundle with event
-                        startActivity(intent);
-                        */
-                    Toast toast = Toast.makeText(EventListActivity.this, dataset.get(position).getName() + " "  + dataset.get(position).getLocation(),Toast.LENGTH_LONG);
-                    toast.show();
+                    /*Intent intent = new Intent(EventListActivity.this, EventDetailsActivity.class);
+                    intent.putExtra("Name",event.getName());
+                    intent.putExtra("Description",event.getDescription());
+                    intent.putExtra("Location",event.getLocation());
+                    intent.putExtra("EventType",event.getEventType());
+
+                     */
                 }
             });
         }
