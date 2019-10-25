@@ -16,7 +16,7 @@
     <TextView
         android:id="@+id/hello_usern"
         android:layout_width="1600px"
-        android:layout_height="407px"
+        android:layout_height="wrap_content"
         android:layout_marginTop="487px"
         android:gravity="center_horizontal|top"
         android:text="@string/hello_usern"

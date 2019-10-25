@@ -19,6 +19,7 @@
         android:text="@string/goBack"
         android:textColor="#FFFFFF"
         android:textSize="110px"
+        android:onClick="onBackBtnClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

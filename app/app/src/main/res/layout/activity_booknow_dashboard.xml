@@ -1,96 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:id="@+id/sideNav"
-        android:layout_width="64dp"
-        android:layout_height="match_parent"
-        android:paddingRight="10dp"
-        >
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/nav_button">
-
-        </ImageButton>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/dashBoard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_toRightOf="@+id/sideNav"
-        android:layout_toEndOf="@+id/sideNav">
-
-        <LinearLayout
-            android:id="@+id/headerBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/dashboard"
-                android:textSize="64sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/filterBtnGroup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="60dp"
-                android:paddingRight="60dp"
-                android:text="@string/see_all_activities"
-                android:textSize="64sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="60dp"
-                android:paddingRight="60dp"
-                android:text="@string/physical_activities"
-                android:onClick="onPhysicalBtnClicked"
-                android:textSize="64sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="60dp"
-                android:paddingRight="60dp"
-                android:text="@string/arts_crafts_activities"
-                android:textSize="64sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="60dp"
-                android:paddingRight="60dp"
-                android:text="@string/rec_activities"
-                android:textSize="64sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+    android:orientation="vertical"
+    app:fontFamily="@font/roboto">
 
 
-    </LinearLayout>
+    <ImageButton
+        android:layout_width="131px"
+        android:layout_height="92px"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="121px"
+        android:layout_marginLeft="121px"
+        android:layout_marginTop="129px"
+        android:src="@drawable/nav_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</RelativeLayout>
+    </ImageButton>
+
+    <TextView
+        android:layout_width="518px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="328px"
+        android:layout_marginLeft="328px"
+        android:layout_marginTop="113px"
+        android:text="@string/dashboard"
+        android:textColor="#1976D2"
+        android:textSize="95px"
+        android:gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="1168px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216px"
+        android:layout_marginLeft="216px"
+        android:layout_marginTop="335px"
+        android:text="@string/select_act_type"
+        android:textColor="#1976D2"
+        android:textSize="100px"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/physical"
+        android:layout_width="998px"
+        android:layout_height="367px"
+        android:layout_marginStart="301px"
+        android:layout_marginLeft="301px"
+        android:layout_marginTop="528px"
+        android:background="@drawable/blue_rectangle"
+        android:text="@string/physical_activities"
+        android:textColor="#FFFFFF"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/arts_crafts"
+        android:layout_width="998px"
+        android:layout_height="367px"
+        android:layout_marginStart="301px"
+        android:layout_marginLeft="301px"
+        android:layout_marginTop="918px"
+        android:background="@drawable/purple_rectangle"
+        android:text="@string/arts_crafts_activities"
+        android:textColor="#FFFFFF"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/learn"
+        android:layout_width="998px"
+        android:layout_height="367px"
+        android:layout_marginStart="301px"
+        android:layout_marginLeft="301px"
+        android:layout_marginTop="1307px"
+        android:background="@drawable/green_rectangle"
+        android:text="@string/learn_activities"
+        android:textColor="#FFFFFF"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/volunteer"
+        android:layout_width="998px"
+        android:layout_height="367px"
+        android:layout_marginStart="301px"
+        android:layout_marginLeft="301px"
+        android:layout_marginTop="1708px"
+        android:background="@drawable/orange_rectangle"
+        android:text="@string/volunteer_activities"
+        android:textColor="#FFFFFF"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/see_all_btn"
+        android:layout_width="822px"
+        android:layout_height="208px"
+        android:layout_marginStart="389px"
+        android:layout_marginLeft="389px"
+        android:layout_marginTop="2201px"
+        android:background="@drawable/hollow_blue_rectangle"
+        android:text="@string/see_all_activities"
+        android:textColor="#1976D2"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingLeft="60dp"-->
+<!--        android:paddingRight="60dp"-->
+<!--        android:text="@string/see_all_activities"-->
+<!--        android:textSize="64sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="onPhysicalBtnClicked"-->
+<!--        android:paddingLeft="60dp"-->
+<!--        android:paddingRight="60dp"-->
+<!--        android:text="@string/physical_activities"-->
+<!--        android:textSize="64sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingLeft="60dp"-->
+<!--        android:paddingRight="60dp"-->
+<!--        android:text="@string/arts_crafts_activities"-->
+<!--        android:textSize="64sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingLeft="60dp"-->
+<!--        android:paddingRight="60dp"-->
+<!--        android:text="@string/rec_activities"-->
+<!--        android:textSize="64sp"-->
+<!--        android:textStyle="bold" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
