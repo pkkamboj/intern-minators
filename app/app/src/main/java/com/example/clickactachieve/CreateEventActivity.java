@@ -61,19 +61,7 @@ public class CreateEventActivity extends AppCompatActivity {
     }
 
     private void writeToFile(String data) {
-        ActivityCompat.requestPermissions(CreateEventActivity.this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                1);
-        try {
-            File dir = new File ("/mnt/sdcard/Download");
-            File file = new File(dir, "fake-data.txt");
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(file));
-            outputStreamWriter.write(data);
-            outputStreamWriter.close();
-        }
-        catch (IOException e) {
-            Log.e("Exception", "File write failed: " + e.toString());
-        }
+
     }
 
     private String getEntry() {
