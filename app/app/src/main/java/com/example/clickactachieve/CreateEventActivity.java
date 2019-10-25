@@ -1,28 +1,17 @@
 package com.example.clickactachieve;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +24,6 @@ public class CreateEventActivity extends AppCompatActivity {
     EditText description;
     Button buttonSubmit;
     Button buttonCancel;
-    String filePath = "/mnt/sdcard/Download/fake-data.txt";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,6 +61,9 @@ public class CreateEventActivity extends AppCompatActivity {
     }
 
     private void writeToFile(String data) {
+        ActivityCompat.requestPermissions(CreateEventActivity.this,
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                1);
         try {
             File dir = new File ("/mnt/sdcard/Download");
             File file = new File(dir, "fake-data.txt");
