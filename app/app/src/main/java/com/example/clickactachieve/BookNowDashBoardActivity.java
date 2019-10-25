@@ -26,13 +26,52 @@ public class BookNowDashBoardActivity extends AppCompatActivity {
         sideNav.setVisibility(View.GONE);
     }
 
+    public void onLogoutClicked(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     public void onPhysicalBtnClicked(View v) {
         Intent intent = new Intent(this, PickDateActivity.class);
+        intent.putExtra("type", 0);
+        startActivity(intent);
+    }
+
+    public void onACBtnClicked(View v) {
+        Intent intent = new Intent(this, PickDateActivity.class);
+        intent.putExtra("type", 1);
+        startActivity(intent);
+    }
+
+    public void onLearnBtnClicked(View v) {
+        Intent intent = new Intent(this, PickDateActivity.class);
+        intent.putExtra("type", 2);
+        startActivity(intent);
+    }
+
+    public void onVolunteerBtnClicked(View v) {
+        Intent intent = new Intent(this, PickDateActivity.class);
+        intent.putExtra("type", 3);
         startActivity(intent);
     }
 
     public void allActivitiesBtnClicked(View v) {
         Intent intent = new Intent(this, EventListActivity.class);
+        startActivity(intent);
+    }
+
+    public void artsAndCraftBtnClicked(View v) {
+        Intent intent = new Intent(this, PickDateActivity.class);
+        startActivity(intent);
+    }
+
+    public void learnBtnClicked(View v) {
+        Intent intent = new Intent(this, PickDateActivity.class);
+        startActivity(intent);
+    }
+
+    public void volunteerBtnClicked(View v) {
+        Intent intent = new Intent(this, PickDateActivity.class);
         startActivity(intent);
     }
 }

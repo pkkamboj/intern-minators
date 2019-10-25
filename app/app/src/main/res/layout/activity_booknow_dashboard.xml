@@ -76,6 +76,7 @@
         android:background="@drawable/purple_rectangle"
         android:text="@string/arts_crafts_activities"
         android:textColor="#FFFFFF"
+        android:onClick="artsAndCraftBtnClicked"
         android:textSize="80px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -90,6 +91,7 @@
         android:background="@drawable/green_rectangle"
         android:text="@string/learn_activities"
         android:textColor="#FFFFFF"
+        android:onClick="learnBtnClicked"
         android:textSize="80px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,6 +105,7 @@
         android:layout_marginTop="1708px"
         android:background="@drawable/orange_rectangle"
         android:text="@string/volunteer_activities"
+        android:onClick="volunteerBtnClicked"
         android:textColor="#FFFFFF"
         android:textSize="80px"
         app:layout_constraintStart_toStartOf="parent"
@@ -248,6 +251,7 @@
             android:textColor="#FFFFFF"
             android:textSize="100px"
             android:gravity="top"
+            android:onClick="onLogoutClicked"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

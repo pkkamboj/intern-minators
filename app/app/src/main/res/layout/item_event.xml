@@ -5,6 +5,7 @@
     android:layout_height="652px"
     android:layout_marginLeft="63.5px"
     android:layout_marginBottom="75px"
+    android:id="@+id/event_container"
     android:background="@drawable/green_box_rectangle">
 
     <TextView
@@ -43,9 +44,9 @@
         android:layout_marginLeft="283px"
         android:layout_marginTop="335px"
         android:ellipsize="end"
-        android:maxLines="2"
-        android:text="Hi this is a description for the event, but there are too"
-        android:textSize="95px"
+        android:maxLines="3"
+        android:text="Hi this is a descrition for the event, but there are too mayn many many many"
+        android:textSize="65px"
         android:textColor="#FFFFFF"
         app:fontFamily="@font/roboto_thin"
         app:layout_constraintStart_toStartOf="parent"

@@ -35,6 +35,9 @@
         <activity android:name=".EventListActivity">
 
         </activity>
+        <activity android:name=".EventDetailsActivity">
+
+        </activity>
         <activity android:name=".BookNowDashBoardActivity"
             android:parentActivityName=".UserLandingActivity">
 

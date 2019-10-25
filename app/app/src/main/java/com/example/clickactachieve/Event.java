@@ -11,7 +11,8 @@ public class Event {
 
     public static int PHYSICAL = 0;
     public static int ARTS = 1;
-    public static int RECREATION = 2;
+    public static int LEARN = 2;
+    public static int VOLUNTEER = 3;
 
     public Event(String name, String description, String location, int eventType) {
         this.name = name;

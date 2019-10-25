@@ -14,13 +14,7 @@ public class UserLandingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
-
         setContentView(R.layout.activity_user_landing);
-        TextView usernameView = (TextView) findViewById(R.id.hello_usern);
-        usernameView.setText("Hello, \n".concat(username));
     }
 
     public void clickBookActivity(View v) {
@@ -30,6 +24,7 @@ public class UserLandingActivity extends AppCompatActivity {
 
     public void clickMyBookings(View v) {
         Intent intent = new Intent(this, EventListActivity.class);
+        intent.putExtra("Booked",true);
         startActivity(intent);
     }
 }
