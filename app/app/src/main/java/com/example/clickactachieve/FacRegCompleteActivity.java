@@ -7,16 +7,16 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FacilityInfoActivity extends AppCompatActivity {
+public class FacRegCompleteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facility_info);
+        setContentView(R.layout.activity_fac_reg_complete);
 
-        Button next = findViewById(R.id.facInfoButton);
+        Button done = findViewById(R.id.facRegCompleteButton);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 clickDone();
@@ -28,7 +28,7 @@ public class FacilityInfoActivity extends AppCompatActivity {
     }
 
     public void clickDone() {
-        Intent intent = new Intent(this, FacRegCompleteActivity.class);
+        Intent intent = new Intent(this, FacilityLandingActivity.class);
         startActivity(intent);
     }
 }

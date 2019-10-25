@@ -57,7 +57,7 @@
             android:id="@+id/userInfoButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="Done"
             android:textSize="36sp" />
 
     </LinearLayout>

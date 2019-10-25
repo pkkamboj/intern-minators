@@ -19,10 +19,22 @@
         android:layout_height="152dp"
         android:layout_marginLeft="250dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="227dp"
+        android:layout_marginBottom="100dp"
         android:gravity="center"
         android:onClick="timePicked"
         android:text="select time"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="280dp"
+        android:layout_height="135dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="227dp"
+        android:gravity="center"
+        android:onClick="datePicked"
+        android:text="Done"
         android:textSize="50sp" />
 
 </LinearLayout>
