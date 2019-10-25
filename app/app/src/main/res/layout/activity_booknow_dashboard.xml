@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    app:fontFamily="@font/roboto">
+    app:fontFamily="@font/roboto"
+    android:id="@+id/dashboard_background"
+    android:onClick="onBackgroundClicked">
 
 
     <ImageButton
@@ -17,6 +19,7 @@
         android:layout_marginLeft="121px"
         android:layout_marginTop="129px"
         android:src="@drawable/nav_button"
+        android:onClick="onSideNavClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -118,42 +121,108 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:paddingLeft="60dp"-->
-<!--        android:paddingRight="60dp"-->
-<!--        android:text="@string/see_all_activities"-->
-<!--        android:textSize="64sp"-->
-<!--        android:textStyle="bold" />-->
 
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:onClick="onPhysicalBtnClicked"-->
-<!--        android:paddingLeft="60dp"-->
-<!--        android:paddingRight="60dp"-->
-<!--        android:text="@string/physical_activities"-->
-<!--        android:textSize="64sp"-->
-<!--        android:textStyle="bold" />-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/side_nav"
+        android:layout_width="954px"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#1976D2"
+        android:elevation="10dp"
+        android:visibility="gone">
 
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:paddingLeft="60dp"-->
-<!--        android:paddingRight="60dp"-->
-<!--        android:text="@string/arts_crafts_activities"-->
-<!--        android:textSize="64sp"-->
-<!--        android:textStyle="bold" />-->
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="239px"
+            android:text="@string/profile"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:paddingLeft="60dp"-->
-<!--        android:paddingRight="60dp"-->
-<!--        android:text="@string/rec_activities"-->
-<!--        android:textSize="64sp"-->
-<!--        android:textStyle="bold" />-->
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="442px"
+            android:text="@string/payment"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="645px"
+            android:text="@string/my_bookings"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="645px"
+            android:text="@string/my_bookings"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="1863px"
+            android:text="@string/help"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="2066px"
+            android:text="@string/settings"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="576px"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="189px"
+            android:layout_marginLeft="189px"
+            android:layout_marginTop="2269px"
+            android:text="@string/logout"
+            android:textColor="#FFFFFF"
+            android:textSize="100px"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,10 +22,10 @@ public class LoginActivity extends AppCompatActivity {
     final String TAG = "LoginActivity123";
 
     private void login() {
-        if (usernameText.getText().toString().equals("pcciamsuperuser") && passwordText.getText().toString().equals("password")){
+        if (usernameText.getText().toString().equals("user1") && passwordText.getText().toString().equals("password")){
             System.out.println("hi");
             openUserLanding();
-        } else if (usernameText.getText().toString().equals("facility") && passwordText.getText().toString().equals("password")) {
+        } else if (usernameText.getText().toString().equals("facility1") && passwordText.getText().toString().equals("password")) {
             Log.d(TAG, "login: test");
             openFacilityLanding();
         } else {
