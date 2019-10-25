@@ -44,7 +44,7 @@ public class PickDateActivity extends AppCompatActivity {
                 dpd = new DatePickerDialog(PickDateActivity.this, new DatePickerDialog.OnDateSetListener() {
                     //@Override
                     public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
-                        pickDate.setText(mDay + "/" + mMonth + "/" + mYear);
+                        pickDate.setText(mDay + "/" + (mMonth+1) + "/" + mYear);
                     }
 
                 }, day, month, year);
