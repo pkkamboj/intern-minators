@@ -7,14 +7,14 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class UserInfoActivity extends AppCompatActivity {
+public class UserAddressActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_info);
+        setContentView(R.layout.activity_user_address);
 
-        Button next = findViewById(R.id.userInfoButton);
+        Button next = findViewById(R.id.userAddyButton);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +28,7 @@ public class UserInfoActivity extends AppCompatActivity {
     }
 
     public void clickNext() {
-        Intent intent = new Intent(this, UserAddressActivity.class);
+        Intent intent = new Intent(this, UserDriverActivity.class);
         startActivity(intent);
     }
 }

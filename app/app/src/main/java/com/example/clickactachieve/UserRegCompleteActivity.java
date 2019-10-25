@@ -7,19 +7,19 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class UserInfoActivity extends AppCompatActivity {
+public class UserRegCompleteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_info);
+        setContentView(R.layout.activity_user_reg_complete);
 
-        Button next = findViewById(R.id.userInfoButton);
+        Button done = findViewById(R.id.userRegCompleteButton);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickNext();
+                clickDone();
             }
         });
 
@@ -27,8 +27,8 @@ public class UserInfoActivity extends AppCompatActivity {
 
     }
 
-    public void clickNext() {
-        Intent intent = new Intent(this, UserAddressActivity.class);
+    public void clickDone() {
+        Intent intent = new Intent(this, UserLandingActivity.class);
         startActivity(intent);
     }
 }

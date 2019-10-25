@@ -9,52 +9,52 @@
         android:layout_alignParentLeft="true">
 
         <EditText
-            android:id="@+id/editTextUserFirstName"
+            android:id="@+id/editTextUserAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="FIRST NAME"
+            android:hint="ADDRESS"
             android:textSize="36sp" />
 
         <EditText
-            android:id="@+id/editTextUserLastName"
+        android:id="@+id/editTextUserCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="CITY"
+        android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/editTextUserProvince"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="LAST NAME"
+            android:hint="PROVINCE/STATE"
             android:textSize="36sp" />
 
         <EditText
-            android:id="@+id/editTextUserDOB"
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="DOB (EX. 1956/09/23)"
-            android:inputType="date"
+            android:inputType="textPostalAddress"
+            android:hint="POSTAL CODE"
             android:textSize="36sp" />
 
         <EditText
-            android:id="@+id/editTextUserPhone"
-            android:layout_width="match_parent"
+            android:id="@+id/editTextUserCountry"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="phone"
-            android:hint="PHONE NUMBER"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-        <EditText
-            android:id="@+id/editTextUserPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="PASSWORD"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
+            android:hint="COUNTRY"
             android:textSize="36sp" />
 
         <Button
-            android:id="@+id/userInfoButton"
+            android:id="@+id/userAddyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Next"

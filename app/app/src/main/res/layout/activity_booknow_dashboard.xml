@@ -61,6 +61,7 @@
         android:background="@drawable/blue_rectangle"
         android:text="@string/physical_activities"
         android:textColor="#FFFFFF"
+        android:onClick="onPhysicalBtnClicked"
         android:textSize="80px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

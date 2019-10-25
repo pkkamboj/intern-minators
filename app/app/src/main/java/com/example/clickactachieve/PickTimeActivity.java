@@ -1,6 +1,7 @@
 package com.example.clickactachieve;
 
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,13 +32,18 @@ public class PickTimeActivity extends AppCompatActivity {
                 }, 0, 0, false);
 
                 timePickerDialog.show();
+                //timePicked();
 
             }
+
         });
 
 
     }
 
-
+    public void timePicked() {
+        Intent intent = new Intent(this, EventListActivity.class);
+        startActivity(intent);
+    }
 
 }

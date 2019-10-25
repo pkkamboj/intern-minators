@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText passwordText;
     Button loginButton;
     TextView responseText;
-    final String TAG = "LoginActivity123";
+    final String TAG = "LoginActivity";
 
     private void login() {
         if (usernameText.getText().toString().equals("user1") && passwordText.getText().toString().equals("password")){
