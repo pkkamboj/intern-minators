@@ -14,12 +14,12 @@ public class UserInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
 
-        Button next = findViewById(R.id.userInfoButton);
+        Button done = findViewById(R.id.userInfoButton);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickNext();
+                clickDone();
             }
         });
 
@@ -27,7 +27,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
     }
 
-    public void clickNext() {
+    public void clickDone() {
         Intent intent = new Intent(this, UserAddressActivity.class);
         startActivity(intent);
     }
