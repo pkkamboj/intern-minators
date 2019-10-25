@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="487px"
         android:gravity="center_horizontal|top"
-        android:text="@string/hello_usern"
+        android:text="Hello,\nMay Parker"
         android:textAppearance="@style/hello_usern"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -22,6 +22,7 @@ public class PickTimeActivity extends AppCompatActivity {
 
         pickTime = findViewById(R.id.pickTimeButton);
         done = findViewById(R.id.doneButton);
+        done.setVisibility(View.GONE);
         pickTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)  {
@@ -34,7 +35,7 @@ public class PickTimeActivity extends AppCompatActivity {
                 }, 0, 0, false);
 
                 timePickerDialog.show();
-
+                done.setVisibility(View.VISIBLE);
             }
 
         });
