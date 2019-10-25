@@ -116,6 +116,7 @@ public class EventListActivity extends AppCompatActivity {
             // - replace the contents of the view with that element
             ((TextView) holder.view.findViewById(R.id.text_event_location)).setText(dataset.get(position).getLocation());
             ((TextView) holder.view.findViewById(R.id.text_event_name)).setText(dataset.get(position).getName());
+            ((TextView) holder.view.findViewById(R.id.text_event_description)).setText(dataset.get(position).getDescription());
             //set the fields in holder
 
             holder.view.setOnClickListener(new View.OnClickListener() {
@@ -137,5 +138,9 @@ public class EventListActivity extends AppCompatActivity {
         public int getItemCount() {
             return dataset.size();
         }
+    }
+
+    public void onBackBtnClicked(View v) {
+        finish();
     }
 }

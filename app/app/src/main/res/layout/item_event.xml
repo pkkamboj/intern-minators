@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="1473px"
     android:layout_height="652px"
-    android:layout_gravity="center"
+    android:layout_marginLeft="63.5px"
+    android:layout_marginBottom="75px"
     android:background="@drawable/green_box_rectangle">
 
     <TextView
