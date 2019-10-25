@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     final String TAG = "LoginActivity";
 
     private void login() {
-        if (usernameText.getText().toString().equals("user1") && passwordText.getText().toString().equals("password")){
+        if (usernameText.getText().toString().equals("mparker") && passwordText.getText().toString().equals("password")){
             System.out.println("hi");
             openUserLanding();
         } else if (usernameText.getText().toString().equals("facility1") && passwordText.getText().toString().equals("password")) {
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void openUserLanding(){
         Intent intent = new Intent(this, UserLandingActivity.class);
-        intent.putExtra("username", "pcciamsuperuser");
+        intent.putExtra("username", "MayParker");
         startActivity(intent);
     }
 
