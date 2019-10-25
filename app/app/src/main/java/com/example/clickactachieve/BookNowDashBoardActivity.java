@@ -18,4 +18,9 @@ public class BookNowDashBoardActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PickDateActivity.class);
         startActivity(intent);
     }
+
+    public void allActivitiesBtnClicked(View v) {
+        Intent intent = new Intent(this, EventListActivity.class);
+        startActivity(intent);
+    }
 }
