@@ -1,21 +1,13 @@
 package com.example.clickactachieve;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class CreateEventActivity extends AppCompatActivity {
     EditText name;
@@ -43,58 +35,25 @@ public class CreateEventActivity extends AppCompatActivity {
                 navigateToFacilityLanding();
             }
         });
-
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                try {
-                    writeToFile(getEntry());
-
-//                    Log.d("TAG", readFromFile(getApplicationContext()));
-                } catch (Exception e) {
-                    Log.d("TAG", e.toString());
-                }
+                addEventToList();
                 navigateToFacilityLanding();
             }
         });
     }
 
-    private void writeToFile(String data) {
+    private void addEventToList() {
+        Event newEvent = new Event(name.getText().toString(), description.getText().toString(),
+                location.getText().toString(), Integer.parseInt(eventType.getText().toString()));
 
-    }
-
-    private String getEntry() {
-        int nameIndex = 5;
-        int eventTypeIndex = 9;
-        int locationIndex = 8;
-        int descriptionIndex = 7;
-
-        String retval = "";
-
-        for (int i = 0; i < 10; i++) {
-            if (i == nameIndex) {
-                retval += name.getText().toString();
-            } else if (i == eventTypeIndex) {
-                retval += eventType.getText().toString();
-            } else if (i == locationIndex) {
-                retval += location.getText().toString();
-            } else if (i == descriptionIndex) {
-                retval += description.getText().toString();
-            } else {
-                retval += " ";
-            }
-            if (i != 9) {
-                retval += "~";
-            }
-        }
-        return retval;
+        EventListActivity.events.add(newEvent);
     }
 
     private void navigateToFacilityLanding() {
         Intent intent = new Intent(this, FacilityLandingActivity.class);;
         startActivity(intent);
     }
-
-
 }
